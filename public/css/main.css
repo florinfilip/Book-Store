@@ -234,3 +234,20 @@ form {
     display: none;
   }
 }
+
+
+.user-message{
+  margin: auto;
+  width: 90%;
+  border: 1px solid rgb(66, 66, 151);
+  background-color: rgb(207, 207, 240);
+  padding: 1rem;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.user-message--error{
+  border-color: red;
+  background: rgb(255, 176,176);
+  color: red;
+
