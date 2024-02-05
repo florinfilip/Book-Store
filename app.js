@@ -1,7 +1,10 @@
 const path = require("path");
+require('dotenv').config({
+  path:__dirname + '/secret.env'
+});
+
 const express = require("express");
 const session = require("express-session");
-
 const MongoDBStore = require("connect-mongodb-session")(session);
 const mongoose = require("mongoose");
 
@@ -13,8 +16,7 @@ const errorController = require("./controllers/error");
 const User = require("./models/user");
 const app = express();
 
-const MONGODB_URI =
-  "mongodb+srv://ffiliptesting8x8:n3p4VCWiczSYZiA9@cluster0.doy97nj.mongodb.net/shop";
+const MONGODB_URI = process.env.MONGODB;
 
 const store = new MongoDBStore({
   uri: MONGODB_URI,
